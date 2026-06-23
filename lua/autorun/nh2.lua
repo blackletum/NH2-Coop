@@ -70,3 +70,27 @@ if CLIENT then
         gui.AddCaption('<norep:1>' .. text, duration, false)
     end)
 end
+
+local nh2_npcs = {
+    { nicename = "#NH.Cook",         classname = "npc_nh_cook"          },
+    { nicename = "#NH.Demon",        classname = "npc_nh_demon"         },
+    { nicename = "#NH.DoctorTorso",  classname = "npc_nh_doctor_torso"  },
+    { nicename = "#NH.Doctor",       classname = "npc_nh_doctor"        },
+    { nicename = "#NH.Guard",        classname = "npc_nh_guard"         },
+    { nicename = "#NH.JanitorTorso", classname = "npc_nh_janitor_torso" },
+    { nicename = "#NH.Janitor",      classname = "npc_nh_janitor"       },
+    { nicename = "#NH.PatientTorso", classname = "npc_nh_patient_torso" },
+    { nicename = "#NH.Patient",      classname = "npc_nh_patient"       },
+    { nicename = "#NH.Surgeon",      classname = "npc_nh_surgeon"       },
+    { nicename = "#NH.Worker",       classname = "npc_nh_worker"        },
+}
+
+for _, npc in ipairs( nh2_npcs ) do
+    list.Set( "NPC", npc.classname, {
+        Name     = npc.nicename,
+        Class    = npc.classname,
+        Category = "Nightmare House 2",
+    })
+end
+
+list.Set("ContentCategoryIcons", "Nightmare House 2", "vgui/nh2_16.png")
