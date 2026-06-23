@@ -67,6 +67,6 @@ if CLIENT then
             duration = tonumber(lenTag) or duration
         end
         
-        gui.AddCaption(text, duration, false)
+        gui.AddCaption('<norep:1>' .. text, duration, false)
     end)
 end
