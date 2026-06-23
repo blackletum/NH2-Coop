@@ -1,7 +1,6 @@
 
 
 -- These files get sent to the client
-AddCSLuaFile("networks.lua")
 AddCSLuaFile("cl_hints.lua")
 AddCSLuaFile("cl_init.lua")
 AddCSLuaFile("cl_notice.lua")
@@ -15,7 +14,6 @@ AddCSLuaFile("save_load.lua")
 AddCSLuaFile("shared.lua")
 AddCSLuaFile("gui/IconEditor.lua")
 include("shared.lua")
-include("networks.lua")
 include("commands.lua")
 include("nh2_player.lua")
 include("player.lua")

@@ -2,7 +2,6 @@
 -- Den Urakolouy
 
 include("shared.lua")
-include("networks.lua")
 include("cl_spawnmenu.lua")
 include("cl_notice.lua")
 include("cl_hints.lua")
