@@ -859,23 +859,6 @@ function GM:CanEditVariable(ent, ply, key, val, editor)
     return true
 end
 
---
--- Sound emited on serverside.
---
-function GM:EntityEmitSound(data)
-    local name = data.OriginalSoundName
-    local filen = data.SoundName
-    local level = data.SoundLevel
-    local pos = data.Pos
-
-    if not IsValid(data.Entity) then return end
-    
-    net.Start(NH2NET.CC)
-        net.WriteString(name)
-        net.WriteString(filen)
-    net.Broadcast()
-end
-
 local TO_OVERRIDE = {
     "models/blackout.mdl",
     "models/combine_helicopter.mdl",
